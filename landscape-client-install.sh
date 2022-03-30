@@ -5,11 +5,12 @@
 ##
 ## Configures the client for connection to an on-prem landscape server
 
-if [ $# != "2" ]; then
+if [ $# != "1" ]; then
     echo "Usage: $0 [server]"
+    exit 0
 fi
 
-$server_name = $1
+server_name = $1
 
 sudo apt-get update
 sudo apt-get install -y landscape-client
