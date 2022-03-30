@@ -10,7 +10,7 @@ if [ $# != "1" ]; then
     exit 0
 fi
 
-server_name = $1
+server_name=$1
 
 sudo apt-get update
 sudo apt-get install -y landscape-client
