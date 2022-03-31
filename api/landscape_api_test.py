@@ -27,7 +27,7 @@ else:
 		print("ID: ", computer["id"])
 		print("Title: ", computer["title"])
 		print("Hostname: ", computer["hostname"])
-		print("Last ping: ", computer["last_ping_time"])§
+		print("Last ping: ", computer["last_ping_time"])
 		if computer["reboot_required_flag"]:
-			print(colored(computer["hostname"] + " requires reboot!", "blue", attrs=['bold']))
-print("[*] All done!")
+			print(colored(computer["hostname"] + " requires reboot!", "red", attrs=['bold']))
+print(colored("[*] All done!", "green", attrs=['bold']))
