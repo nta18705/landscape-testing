@@ -3,14 +3,9 @@
 import os, json, sys
 from termcolor import colored
 from landscape_api.base import API, HTTPError
+from private import config
 
-uri = "https://landscape-test/api/"
-# Be careful to include the trailing slash at the end of the URI or you will get 403 SignatureDoesNotMatch errors from the api
-key = "JYYH5ADNILT12B9G1QLN"
-secret = "hmyJCNuiKiZLSYhB+flBJol26smDo50Mc4XUOAwk"
-ca = "landscape_server_ca.crt"
-
-api = API(uri, key, secret, ca)
+api = API(config.uri, config.key, config.secret, config.ca)
 try:
 	computers = api.get_computers(query="alert:security-upgrades")
 except HTTPError as e:
