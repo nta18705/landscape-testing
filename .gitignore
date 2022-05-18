@@ -1,0 +1,9 @@
+*.crt
+api/*.crt
+api/data/
+api/include
+api/bin
+api/lib
+api/*.txt
+api/*.cfg
+api/private
