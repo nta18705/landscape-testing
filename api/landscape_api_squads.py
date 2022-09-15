@@ -94,6 +94,7 @@ def main():
 			if tags is not None:
 				print(host + ": " + str(tags))
 				if squad not in tags:
+					print(colored(host + " missing squad tag: " + squad, "blue"))
 					set_tags(api, host, squad)
 				if len(tags) <= 1:
 					untagged_hosts.append(host + "," + squad)
